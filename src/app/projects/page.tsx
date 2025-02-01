@@ -1,6 +1,6 @@
 'use client'
 
-import {FloatTopNavigationMenu} from "@/components/navbar/NavigationMenu";
+import {TopNavMenu} from "@/components/navbar/NavigationMenu";
 import Project from "@/components/projects/Project";
 import PhpLogo from "@/components/ui/logos/PhpLogo";
 import NextJsLogo from "@/components/ui/logos/NextJsLogo";
@@ -9,7 +9,7 @@ import ProjectCard from "@/components/projects/Project";
 export default function Page() {
     return (
         <>
-            <FloatTopNavigationMenu />
+            <TopNavMenu />
             <div className="flex flex-col items-center justify-center py-20 space-y-20">
                 <ProjectCard
                     projectName="Burgieclan"

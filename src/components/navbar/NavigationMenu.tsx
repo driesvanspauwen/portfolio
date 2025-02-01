@@ -8,7 +8,7 @@ import {
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 
-function HomeNavigationMenu() {
+function HomeNavMenu() {
     return (
         <NavigationMenu className="px-20 py-4 rounded-md border border-black dark:border-white">
             <NavigationMenuList className="space-x-16">
@@ -27,7 +27,7 @@ function HomeNavigationMenu() {
                     </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <Link href="/resume" legacyBehavior passHref>
+                    <Link href="/about" legacyBehavior passHref>
                         <NavigationMenuLink className={`${navigationMenuTriggerStyle()} px-8 py-4`}>
                             About me
                         </NavigationMenuLink>
@@ -38,7 +38,7 @@ function HomeNavigationMenu() {
     )
 }
 
-function FloatTopNavigationMenu() {
+function TopNavMenu() {
     return (
         <NavigationMenu className="w-full">
             <NavigationMenuList className="w-full justify-between">
@@ -66,7 +66,7 @@ function FloatTopNavigationMenu() {
     )
 }
 
-function ThemeTogglerNavigationMenu() {
+function ThemeTogglerNavMenu() {
     return(
         <NavigationMenu className="w-full">
             <NavigationMenuList className="w-full justify-end">
@@ -81,7 +81,7 @@ function ThemeTogglerNavigationMenu() {
 }
 
 export {
-    HomeNavigationMenu,
-    FloatTopNavigationMenu,
-    ThemeTogglerNavigationMenu
+    HomeNavMenu,
+    TopNavMenu,
+    ThemeTogglerNavMenu
 }
