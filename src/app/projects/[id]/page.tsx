@@ -1,4 +1,5 @@
 'use client'
+export const runtime = 'edge'
 
 import { projects } from "@/data/projects";
 import ProjectDetail from "@/components/projects/ProjectDetail";
