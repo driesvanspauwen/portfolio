@@ -38,12 +38,12 @@ function HomeNavMenu() {
     )
 }
 
-function TopNavMenu() {
+function TopNavMenu({ backLink = "/" }) {
     return (
         <NavigationMenu className="w-full">
             <NavigationMenuList className="w-full justify-between">
                 <NavigationMenuItem>
-                    <Link href="/" legacyBehavior passHref>
+                    <Link href={backLink} legacyBehavior passHref>
                         <NavigationMenuLink className={`${navigationMenuTriggerStyle()} px-4 py-4 h-auto`}>
                             <p className="text-xl">BACK</p>
                         </NavigationMenuLink>

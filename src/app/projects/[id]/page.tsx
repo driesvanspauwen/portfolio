@@ -15,7 +15,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 
     return (
         <>
-            <TopNavMenu />
+            <TopNavMenu backLink="/projects" />
             <ProjectDetail project={project} />
         </>
     );
