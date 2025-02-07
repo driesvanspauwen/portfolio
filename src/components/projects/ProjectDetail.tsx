@@ -19,7 +19,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
 
     return (
         <>
-            <div className="flex flex-col items-center justify-center py-5 md:py-20 space-y-5 md:space-y-20 mx-10">
+            <div className="flex flex-col items-center justify-center py-5 md:py-20 space-y-5 md:space-y-20 mx-5">
                 <div className="w-full max-w-3xl px-8 py-8 rounded-md border border-black dark:border-white items-baseline">
                     <div className="flex flex-col space-y-5 justify-center">
                         <div>
