@@ -1,30 +1,34 @@
 import React from 'react';
+import {Project} from '@/types/project';
 
-const ProjectCard = ({
-    projectName,
-    projectDescription,
-    logos = [],
-    href,
+interface ProjectCardProps {
+    project: Project;
+    className?: string;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({
+    project,
     className = ""
 }) => {
-    const handleClick = (e) => {
-        // Only navigate if clicking the interactive area
-        if (e.target.closest('.interactive-area')) {
-            window.location.href = href;
-        }
+    const {name, description, logos} = project;
+
+    const handleClick = () => {
+        window.location.href = `/projects/${project.id}`;
     };
 
     return (
         <div
             className={`max-w-3xl px-5 py-5 rounded-md border border-black dark:border-white ${className}`}
-            onClick={handleClick}
         >
             <div className="flex flex-col space-y-5 justify-center">
-                <div className="flex flex-col space-y-5 justify-center interactive-area group cursor-pointer">
+                <div
+                    className="flex flex-col space-y-5 justify-center interactive-area group cursor-pointer"
+                    onClick={handleClick}
+                >
                     <h1 className="text-2xl font-bold group-hover:underline">
-                        {projectName}
+                        {name}
                     </h1>
-                    <p>{projectDescription}</p>
+                    <p>{description}</p>
                 </div>
                 <div className="flex flex-row space-x-2 items-center">
                     {logos.map(({Logo, width = 30, height = 30}, index) => (
