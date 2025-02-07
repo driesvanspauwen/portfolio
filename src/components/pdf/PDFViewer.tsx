@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { pdfjs, Document, Page } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
@@ -17,11 +17,25 @@ const maxWidth = 800;
 
 type PDFFile = string | File | null;
 
-export default function PDFViewer( { fileArg }: { fileArg: PDFFile } ): JSX.Element {
+export default function PDFViewer({ fileArg }: { fileArg: PDFFile }): JSX.Element {
     const [file, setFile] = useState<PDFFile>(fileArg);
     const [numPages, setNumPages] = useState<number>();
-    const [containerRef, setContainerRef] = useState<HTMLElement | null>(null);
-    const [containerWidth, setContainerWidth] = useState<number>();
+    const [containerWidth, setContainerWidth] = useState<number>(0);
+
+    useEffect(() => {
+        const updateWidth = () => {
+            const width = window.innerWidth;
+            // Account for padding on mobile
+            setContainerWidth(width > 768 ? Math.min(width * 0.9, maxWidth) : width - 32);
+        };
+
+        // Set initial width
+        updateWidth();
+
+        // Update width on resize
+        window.addEventListener('resize', updateWidth);
+        return () => window.removeEventListener('resize', updateWidth);
+    }, []);
 
     function onFileChange(event: React.ChangeEvent<HTMLInputElement>): void {
         const { files } = event.target;
@@ -34,20 +48,23 @@ export default function PDFViewer( { fileArg }: { fileArg: PDFFile } ): JSX.Elem
     }
 
     return (
-        <div className="flex flex-col items-center">
-            <div className="flex flex-col items-center my-2.5 py-2.5 px-0 w-full max-w-screen-md">
-                <div className="w-full max-w-[calc(100%-2em)] my-4" ref={setContainerRef}>
-                    <Document file={file} onLoadSuccess={onDocumentLoadSuccess} options={options} className="flex flex-col items-center">
-                        {Array.from(new Array(numPages), (_el, index) => (
-                            <Page
-                                key={`page_${index + 1}`}
-                                pageNumber={index + 1}
-                                width={containerWidth ? Math.min(containerWidth, maxWidth) : maxWidth}
-                                className="my-4 shadow-md shadow-black/50"
-                            />
-                        ))}
-                    </Document>
-                </div>
+        <div className="w-full px-4 md:px-8">
+            <div className="mx-auto max-w-screen-md">
+                <Document
+                    file={file}
+                    onLoadSuccess={onDocumentLoadSuccess}
+                    options={options}
+                    className="flex flex-col items-center"
+                >
+                    {Array.from(new Array(numPages), (_el, index) => (
+                        <Page
+                            key={`page_${index + 1}`}
+                            pageNumber={index + 1}
+                            width={containerWidth}
+                            className="my-4 shadow-md shadow-black/50"
+                        />
+                    ))}
+                </Document>
             </div>
         </div>
     );
