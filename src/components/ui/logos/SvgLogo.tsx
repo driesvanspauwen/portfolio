@@ -1,3 +1,12 @@
+interface SvgLogoProps {
+    width?: number;
+    height?: number;
+    className?: string;
+    viewBox?: string;
+    href?: string;
+    children: React.ReactNode;
+}
+
 export default function SvgLogo({
     width = 18,
     height = 18,
@@ -5,7 +14,7 @@ export default function SvgLogo({
     viewBox = '0 0 180 180',
     href,
     children
-}) {
+}: SvgLogoProps) {
     const SvgContent = (
         <svg
             xmlns="http://www.w3.org/2000/svg"

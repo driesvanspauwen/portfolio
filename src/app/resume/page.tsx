@@ -1,11 +1,11 @@
 import {TopNavMenu} from "@/components/navbar/NavigationMenu";
-import dynamic from "next/dynamic";
+import PDFViewer from "@/components/pdf/PDFViewer";
+import 'core-js/full/promise/with-resolvers.js';
+import { polyfillPromiseWithResolvers } from '@/lib/PromiseWithResolvers';
+
+polyfillPromiseWithResolvers();
 
 export default function Resume() {
-    const PDFViewer = dynamic(
-        () => import('@/components/pdf/PDFViewer').then(mod => mod.default),
-        { ssr: false }
-    )
 
     return (
         <>

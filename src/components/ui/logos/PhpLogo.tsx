@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export default function PhpLogo({width, height, className}) {
+export default function NextJsLogo({width, height, className}: LogoProps) {
   return (
     <a
         href="https://www.php.net"

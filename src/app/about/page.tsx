@@ -19,9 +19,9 @@ export default function About() {
                     <div className="flex flex-col space-y-5 justify-center">
                         <h1 className="text-2xl font-bold">About me</h1>
                         <p>
-                            Hi, I'm Dries, a graduating Computer Science student with a particular interest in
+                            Hi, I&apos;m Dries, a graduating Computer Science student with a particular interest in
                             programming languages, software design and cyber security.
-                            I'm looking for a full time job that challenges me technically and where I can let my
+                            I&apos;m looking for a full time job that challenges me technically and where I can let my
                             creativity flow.
                         </p>
                         <p>

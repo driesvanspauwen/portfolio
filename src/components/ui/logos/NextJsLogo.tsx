@@ -1,6 +1,6 @@
 import SvgLogo from "./SvgLogo";
 
-export default function NextJsLogo({width, height, className}) {
+export default function NextJsLogo({width, height, className}: LogoProps) {
     return (
         <SvgLogo
             width={width}
