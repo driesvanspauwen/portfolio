@@ -2,19 +2,19 @@ import {HomeNavMenu, ThemeTogglerNavMenu} from "@/components/navbar/NavigationMe
 
 export default function Home() {
     return (
-      <main>
-          <div className="h-screen">
-              <ThemeTogglerNavMenu />
+        <main>
+            <div className="h-screen">
+                <ThemeTogglerNavMenu/>
 
-              <div className="h-[calc(100vh-4rem)] flex flex-col space-y-32 items-center justify-center">
-                  <div className="flex-none">
-                      <h1 className="text-6xl font-bold">DRIES VANSPAUWEN</h1>
-                  </div>
-                  <div className="flex-none">
-                      <HomeNavMenu />
-                  </div>
-              </div>
-          </div>
-      </main>
-  );
+                <div className="h-[calc(100vh-4rem)] flex flex-col space-y-32 items-center justify-center text-center">
+                    <div className="flex-none">
+                        <h1 className="text-6xl font-bold">DRIES VANSPAUWEN</h1>
+                    </div>
+                    <div className="w-full p-10">
+                        <HomeNavMenu/>
+                    </div>
+                </div>
+            </div>
+        </main>
+    );
 }

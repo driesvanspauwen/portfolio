@@ -8,7 +8,7 @@ export default function ProjectsPage() {
     return (
         <>
             <TopNavMenu />
-            <div className="flex flex-col items-center justify-center py-20 space-y-20">
+            <div className="flex flex-col items-center justify-center py-20 space-y-20 w-full p-10">
                 {projects.map((project) => (
                     <ProjectCard
                         key={project.id}
