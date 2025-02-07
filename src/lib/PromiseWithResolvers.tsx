@@ -1,3 +1,8 @@
+/**
+ * This file is a polyfill for Promise.withResolvers, which is used in a workaround for a bug in react-pdf:
+ * https://github.com/wojtekmaj/react-pdf/issues/1811
+ */
+
 export type PromiseWithResolvers<T> = {
     promise: Promise<T>;
     resolve: (value: T | PromiseLike<T>) => void;
