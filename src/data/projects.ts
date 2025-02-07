@@ -26,7 +26,8 @@ export const projects: Project[] = [{
             items: [
                 'Built by a group of engineering students using NextJS (Typescript & Tailwind CSS) and Symfony (PHP).',
                 'Self-hosted development and production environments with automated deployment via Github Actions.',
-                'Custom OAuth 2.0 authorization flow using JWTs to link with existing student accounts.'
+                'Custom OAuth 2.0 authorization flow using JWTs to link with existing student accounts.',
+                'Currently a work in progress, with a planned release in the first half of 2025'
             ]
         }
     ],
