@@ -10,7 +10,7 @@ export default function Home() {
                     <div className="flex-none">
                         <h1 className="text-6xl font-bold">DRIES VANSPAUWEN</h1>
                     </div>
-                    <div className="w-full p-10">
+                    <div className="w-full p-10 md:w-auto md:p-0">
                         <HomeNavMenu/>
                     </div>
                 </div>
