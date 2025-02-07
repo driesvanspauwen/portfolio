@@ -30,9 +30,5 @@ export const projects: Project[] = [{
             ]
         }
     ],
-    images: [
-        { src: '/screenshot.png', alt: 'Burgieclan interface screenshot 1' },
-        { src: '/screenshot.png', alt: 'Burgieclan interface screenshot 2' },
-        { src: '/screenshot.png', alt: 'Burgieclan interface screenshot 3' }
-    ]
+    images: []
 }]
