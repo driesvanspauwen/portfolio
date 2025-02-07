@@ -1,7 +1,12 @@
-import PDFViewer from "@/components/pdf/PDFViewer";
 import {TopNavMenu} from "@/components/navbar/NavigationMenu";
+import dynamic from "next/dynamic";
 
 export default function Resume() {
+    const PDFViewer = dynamic(
+        () => import('@/components/pdf/PDFViewer').then(mod => mod.default),
+        { ssr: false }
+    )
+
     return (
         <>
             <TopNavMenu/>
