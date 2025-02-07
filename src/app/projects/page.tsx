@@ -18,7 +18,7 @@ export default function Page() {
                         { Logo: NextJsLogo, width: 30, height: 30 },
                         { Logo: PhpLogo, width: 60, height: 30 }
                     ]}
-                    href="https://example.com"
+                    href="/projects/burgieclan"
                 />
             </div>
         </>

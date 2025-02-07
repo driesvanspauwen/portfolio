@@ -26,8 +26,8 @@ const ProjectCard = ({
                     </h1>
                     <p>{projectDescription}</p>
                 </div>
-                <div className="logos-section flex flex-row space-x-2 items-center">
-                    {logos.map(({ Logo, width = 30, height = 30 }, index) => (
+                <div className="flex flex-row space-x-2 items-center">
+                    {logos.map(({Logo, width = 30, height = 30}, index) => (
                         <Logo
                             key={index}
                             width={width}
