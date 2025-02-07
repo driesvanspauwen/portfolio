@@ -19,7 +19,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
 
     return (
         <>
-            <TopNavMenu />
             <div className="flex flex-col items-center justify-center py-20 space-y-20">
                 <div className="w-full max-w-3xl px-8 py-8 rounded-md border border-black dark:border-white items-baseline">
                     <div className="flex flex-col space-y-5 justify-center">
