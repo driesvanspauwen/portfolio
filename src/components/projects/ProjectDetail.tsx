@@ -74,6 +74,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
                                                         height={350}
                                                         src={image.src}
                                                         alt={image.alt}
+                                                        className="rounded-md"
                                                     />
                                                 </CarouselItem>
                                             ))}
