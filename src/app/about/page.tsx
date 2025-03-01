@@ -31,11 +31,11 @@ export default function About() {
                             creativity flow.
                         </p>
                         <p>
-                            I think one of my strengths is my
+                            I think one of my strengths is my{' '}
                             <span>
                                 <HoverCard>
                                   <HoverCardTrigger
-                                      className="font-bold cursor-pointer"> eye for simplicity</HoverCardTrigger>
+                                      className="font-bold underline cursor-pointer">eye for simplicity</HoverCardTrigger>
                                   <HoverCardContent className="w-full max-w-xl">
                                       <div className="flex flex-col justify-between space-y-2">
                                           <p className="text-sm">Simple can be harder than complex; you have to work hard to get your thinking
@@ -53,9 +53,9 @@ export default function About() {
                         <p>
                             Besides spending a lot of time nerding out behind my PC, I regularly go to the gym,
                             and I love good food and a strong Belgian beer. I enjoy talking ideas over a coffee,
-                            so if you ever want to chat about anything, feel free to
+                            so if you ever want to chat about anything, feel free to{' '}
                             <span><a href="https://www.linkedin.com/in/driesvanspauwen"
-                                     className="font-bold"> reach out</a></span>! :)
+                                     className="font-bold underline">reach out</a></span>! :)
                         </p>
                         <div className="flex flex-row items-center justify-center pt-5">
                             <Dialog>

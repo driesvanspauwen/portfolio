@@ -31,5 +31,19 @@ export const projects: Project[] = [{
             ]
         }
     ],
-    images: []
+    images: [
+        {
+            src: '/burgieclan/login.png',
+            alt: 'Burgieclan login page'
+        },
+
+        {
+            src: '/burgieclan/upload.png',
+            alt: 'Burgieclan upload page'
+        },
+        {
+            src: '/burgieclan/document.png',
+            alt: 'Burgieclan document page'
+        },
+    ]
 }]

@@ -39,7 +39,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
                             {githubUrl && (
                                 <a
                                     href={githubUrl}
-                                    className="text-sm"
+                                    className="text-sm underline"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -63,9 +63,9 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
 
                         {images.length > 0 && (
                             <>
-                                <h1 className="text-xl font-bold pt-2">Images</h1>
-                                <div className="justify-center items-center flex pt-1">
-                                    <Carousel className="relative w-full max-w-[40rem]">
+                                <h1 className="text-xl font-bold pt-2 hidden md:block">Images</h1>
+                                <div className="justify-center items-center pt-1 hidden md:flex">
+                                    <Carousel className="relative w-full max-w-[40rem] hidden md:block">
                                         <CarouselContent>
                                             {images.map((image, index) => (
                                                 <CarouselItem key={index}>
