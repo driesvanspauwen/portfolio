@@ -25,10 +25,8 @@ export default function About() {
                     <div className="flex flex-col space-y-5 justify-center">
                         <h1 className="text-2xl font-bold">About me</h1>
                         <p>
-                            Hi, I&apos;m Dries, a graduating Computer Science student with a particular interest in
-                            programming languages, software design and cyber security.
-                            I&apos;m looking for a full time job that challenges me technically and where I can let my
-                            creativity flow.
+                            Hi, I&apos;m Dries, a graduating Computer Science student seeking full-time opportunities that have something to do with programming languages, software design, and cyber security.
+                            My ideal job would challenge me technically, let me creativity to solve problems and trust me with meaningful responsibilities.
                         </p>
                         <p>
                             I think one of my strengths is my{' '}
@@ -51,9 +49,10 @@ export default function About() {
                             especially for long-term projects involving multiple people working on the same thing.
                         </p>
                         <p>
-                            Besides spending a lot of time nerding out behind my PC, I regularly go to the gym,
-                            and I love good food and a strong Belgian beer. I enjoy talking ideas over a coffee,
-                            so if you ever want to chat about anything, feel free to{' '}
+                            When I&apos;m not immersed in code, you&apos;ll find me at the gym, enjoying good food,
+                            or appreciating a quality Belgian beer.
+                            I love talking ideas over a coffee, so if you ever want to chat about anything,
+                            feel free to{' '}
                             <span><a href="https://www.linkedin.com/in/driesvanspauwen"
                                      className="font-bold underline">reach out</a></span>! :)
                         </p>

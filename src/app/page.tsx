@@ -10,7 +10,9 @@ export default function Home() {
                     <div className="flex-none">
                         <h1 className="text-6xl font-bold">DRIES VANSPAUWEN</h1>
                     </div>
-                    <p className="max-w-6xl p-10">I am a graduating Computer Science student with a particular interest in programming languages, software design and cyber security. I&aposm looking for a full-time position that challenges me from a technical perspective and where I can let my creativity flow!</p>
+                    <p className="max-w-6xl p-10">
+                        Graduating Computer Science student with a particular interest in programming languages, software design and cyber security. Looking for a full-time position that challenges me from a technical perspective and where I can let my creativity flow.
+                    </p>
                     <div className="w-full p-10 md:w-auto md:p-0">
                         <HomeNavMenu/>
                     </div>
