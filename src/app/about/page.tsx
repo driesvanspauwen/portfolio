@@ -26,7 +26,7 @@ export default function About() {
                         <h1 className="text-2xl font-bold">About me</h1>
                         <p>
                             Hi, I&apos;m Dries, a graduating Computer Science student seeking full-time opportunities that have something to do with programming languages, software design, and cyber security.
-                            My ideal job would challenge me technically, let me creativity to solve problems and trust me with meaningful responsibilities.
+                            My ideal job would challenge me technically, let me use creativity to solve problems and trust me with meaningful responsibilities.
                         </p>
                         <p>
                             I think one of my strengths is my{' '}
