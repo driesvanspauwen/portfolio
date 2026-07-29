@@ -26,7 +26,7 @@ export default function About() {
                         <h1 className="text-2xl font-bold">About me</h1>
                         <p>
                             Hi, I&apos;m Dries, a software engineer at Codon One, where I help build the next generation of genome interpretation software. In an age where AI is taking over coding, 
-                            I have the most fun with the parts it can't handle on its own yet: building maintainable systems that scale, designing interfaces people actually enjoy using, and thinking about the product behind it all.
+                            I have the most fun with the parts it can&apos;t handle on its own yet: building maintainable systems that scale, designing interfaces people actually enjoy using, and thinking about the product behind it all.
                         </p>
                         <p>
                             I think one of my strengths is my{' '}
