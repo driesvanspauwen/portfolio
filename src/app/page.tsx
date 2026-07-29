@@ -11,7 +11,7 @@ export default function Home() {
                         <h1 className="text-6xl font-bold">DRIES VANSPAUWEN</h1>
                     </div>
                     <p className="max-w-6xl p-10">
-                        Graduating Computer Science student with a particular interest in programming languages, software design and cyber security. Looking for a full-time position that challenges me from a technical perspective and where I can let my creativity flow.
+                        Product-minded software engineer with a particular interest in system design, cyber security and genetics. Currently building the next generation of genome interpretation software at Codon One.
                     </p>
                     <div className="w-full p-10 md:w-auto md:p-0">
                         <HomeNavMenu/>
