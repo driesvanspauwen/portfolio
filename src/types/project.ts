@@ -14,6 +14,9 @@ export type Project = {
     name: string;
     description: string;
     githubUrl?: string;
+    pdfUrl?: string;
+    award?: string;
+    awardUrl?: string;
     logos: ProjectLogo[];
     sections: ProjectSection[];
     images: {

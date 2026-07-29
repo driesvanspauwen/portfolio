@@ -25,20 +25,20 @@ export default function About() {
                     <div className="flex flex-col space-y-5 justify-center">
                         <h1 className="text-2xl font-bold">About me</h1>
                         <p>
-                            Hi, I&apos;m Dries, a graduating Computer Science student seeking full-time opportunities that have something to do with programming languages, software design, and cyber security.
-                            My ideal job would challenge me technically, let me use creativity to solve problems and trust me with meaningful responsibilities.
+                            Hi, I&apos;m Dries, a software engineer at Codon One, where I help build the next generation of genome interpretation software. In an age where AI is taking over coding, 
+                            I have the most fun with the parts it can't handle on its own yet: building maintainable systems that scale, designing interfaces people actually enjoy using, and thinking about the product behind it all.
                         </p>
                         <p>
                             I think one of my strengths is my{' '}
                             <span>
-                                <HoverCard>
+                                <HoverCard openDelay={50} closeDelay={50}>
                                   <HoverCardTrigger
                                       className="font-bold underline cursor-pointer">eye for simplicity</HoverCardTrigger>
                                   <HoverCardContent className="w-full max-w-xl">
                                       <div className="flex flex-col justify-between space-y-2">
-                                          <p className="text-sm">Simple can be harder than complex; you have to work hard to get your thinking
+                                          <p className="text-sm">&ldquo;Simple can be harder than complex; you have to work hard to get your thinking
                                             clean to make it simple. But it&apos;s worth it in the end because once you get
-                                            there, you can move mountains.</p>
+                                            there, you can move mountains.&rdquo;</p>
                                           <p className="text-xs">Steve Jobs - interview, in Business Week 25 May 1998</p>
                                       </div>
                                   </HoverCardContent>

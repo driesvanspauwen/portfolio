@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { ArrowUpRight, FileText, Github, Star } from 'lucide-react';
 import { Project } from '@/types/project';
 import { TopNavMenu } from "@/components/navbar/NavigationMenu";
 import {
@@ -14,8 +15,27 @@ interface ProjectDetailProps {
     project: Project;
 }
 
+const pillBase = "inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-sm font-medium";
+const pillLink = "group transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm";
+const pillNeutral = "border-black/50 dark:border-white/50 bg-black/5 dark:bg-white/5 hover:border-black dark:hover:border-white hover:bg-black/10 dark:hover:bg-white/10";
+const pillAward = "border-yellow-400/50 bg-yellow-400/10 text-yellow-600 dark:text-yellow-400 hover:border-yellow-400 hover:bg-yellow-400/20";
+
+const PillArrow = () => (
+    <ArrowUpRight
+        size={14}
+        className="opacity-50 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100"
+    />
+);
+
+const githubLabel = (url: string) => {
+    const path = url
+        .replace(/^https?:\/\/(www\.)?github\.com\//, '')
+        .replace(/\/+$/, '');
+    return path.split('/').slice(0, 2).join('/') || url;
+};
+
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
-    const { name, githubUrl, logos, sections, images } = project;
+    const { name, description, githubUrl, pdfUrl, award, awardUrl, logos, sections, images } = project;
 
     return (
         <>
@@ -36,17 +56,56 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
                                     ))}
                                 </div>
                             </div>
-                            {githubUrl && (
-                                <a
-                                    href={githubUrl}
-                                    className="text-sm underline"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    {githubUrl}
-                                </a>
+                            {(award || githubUrl || pdfUrl) && (
+                                <div className="flex flex-row flex-wrap items-center gap-2 pt-4 md:pt-3">
+                                    {githubUrl && (
+                                        <a
+                                            href={githubUrl}
+                                            className={`${pillBase} ${pillLink} ${pillNeutral}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <Github size={16} />
+                                            {githubLabel(githubUrl)}
+                                            <PillArrow />
+                                        </a>
+                                    )}
+                                    {pdfUrl && (
+                                        <a
+                                            href={pdfUrl}
+                                            className={`${pillBase} ${pillLink} ${pillNeutral}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FileText size={16} className="" />
+                                            Paper
+                                            <PillArrow />
+                                        </a>
+                                    )}
+                                    {award && (
+                                        awardUrl ? (
+                                            <a
+                                                href={awardUrl}
+                                                className={`${pillBase} ${pillLink} ${pillAward}`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <Star size={16} className="fill-yellow-400 text-yellow-400" />
+                                                {award}
+                                                <PillArrow />
+                                            </a>
+                                        ) : (
+                                            <div className={`${pillBase} ${pillAward}`}>
+                                                <Star size={16} className="fill-yellow-400 text-yellow-400" />
+                                                {award}
+                                            </div>
+                                        )
+                                    )}
+                                </div>
                             )}
                         </div>
+
+                        <p className="text-sm md:text-base">{description}</p>
 
                         {sections.map((section, index) => (
                             <div key={index}>
